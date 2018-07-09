@@ -2,33 +2,22 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<classPathEntry
-		location="D:\eclipse-workspace\SM\lib\mysql-connector-java-5.1.7-bin.jar" />
+		location="D:\Maven\repository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar" />
 	<context id="context1">
 		<commentGenerator>
 			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
-		<jdbcConnection connectionURL="jdbc:mysql://localhost:3306/premission"
-			driverClass="com.mysql.jdbc.Driver" password="196812" userId="root" />
+		<jdbcConnection connectionURL="jdbc:mysql://localhost:3306/test" driverClass="com.mysql.jdbc.Driver"
+			password="196812" userId="root" />
 		<!-- 指定生成PO类的位置 -->
-		<javaModelGenerator targetPackage="com.xh.pojo"
-			targetProject="Demo" />
+		<javaModelGenerator targetPackage="com.xh.pojo" targetProject="Demo" />
 		<!-- mapper映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="com.xh.dao"
-			targetProject="Demo" />
+		<sqlMapGenerator targetPackage="com.xh.dao" targetProject="Demo" />
 		<!-- mapper接口生成的位置 -->
-		<javaClientGenerator targetPackage="com.xh.dao"
-			targetProject="Demo" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="com.xh.dao" targetProject="Demo" type="XMLMAPPER" />
 		<!-- 指定数据库表 -->
-		<table tableName="user">
-		</table>
-		<table tableName="role">
-		</table>
-		<table tableName="user_role">
-		</table>
-		<table tableName="menu">
-		</table>
-		<table tableName="role_menu">
-		</table>
+		<table tableName="company" />
+
 	</context>
 </generatorConfiguration>
